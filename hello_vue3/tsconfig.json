@@ -1,0 +1,24 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "types": ["vite/client", "@vue/compiler-sfc"],
+    "lib": ["dom", "es6"],
+
+    //@/* 应映射到项目 src 目录下的所有文件 (src/*)。
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    // axios
+    "typeRoots": ["node_modules/@types"]
+  }
+}
